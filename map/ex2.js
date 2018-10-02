@@ -43,9 +43,47 @@ En sortie: [
  */
 
 function getFoodCategories(foods) {
+	let y = [];
+	for (let i = 0; i<foods.length; i++)
+	{
+		if (foods[i].isVegetarian==false)
+		{
+			foods[i].food=foods[i].food + " is not suitable for vegetarians"; 	
+		}
+		
+		else
+		{
+			foods[i].food=foods[i].food + " is suitable for vegetarians"; 	
+		}
+	}
+	
+	for (let a = 0; a<foods.length; a++)
+	{
+		y[a] = foods[a].food ; 
+	}
+	
+	return y;
 }
 
 
+console.log(getFoodCategories([
+    {
+      food: 'Bacon',
+      isVegetarian: false
+    },
+    {
+      food: 'Sausage',
+      isVegetarian: false
+    },
+    {
+      food: 'Tofu',
+      isVegetarian: true
+    },
+    {
+      food: 'Chick Pea',
+      isVegetarian: true
+    }
+  ]));
 
 // Ne pas modifier l'export
 module.exports = getFoodCategories;

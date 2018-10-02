@@ -39,7 +39,29 @@ Exemple d'entrée:
  */
 
 function searchWordFilter(items, search) {
+	
+	b="";
+	for (let i = 0; i<search.length; i++)
+	{
+		if (i==0){
+		b=search[0].toUpperCase();
+	} else {
+		b = b + search[i];
+	}
 }
+	
+	return items.filter(item=>item.includes(b));
+}
+
+console.log(searchWordFilter([
+    'Mad Max: Fury Road',
+    'Interstellar',
+    'Revenge of the Nerds',
+    'Revenge of the Pink Panther',
+    'Star Wars: Episode I - The Phantom Menace',
+    'Star Wars: Episode II - Attack of the Clones',
+    'Star Wars: Episode III - Revenge of the Sith'
+  ],'revenge'));
 
 // Ne pas modifier l'export
 module.exports = searchWordFilter;

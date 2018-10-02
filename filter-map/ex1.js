@@ -19,10 +19,35 @@ Tableau en entrée:
 
 Sortie attendue:
 ['Yoda', 'Obiwan Kenobi', 'Mace Windu']
-
+characters[i].side
 */
 
 function getJedisNames(characters) {
+	let k = [];
+	let gh = 0;
+	String(characters).split(' ');
+		for (let i = 0; i<characters.length; i++)
+		{
+			
+			if (characters[i].side=='light')
+			{
+				k[gh]=characters[i].name;
+				gh++;
+			}
+		}
+	
+	
+	return k;
+	
 }
+
+console.log(getJedisNames([
+  { name: 'Yoda', side: 'light' },
+  { name: 'Count Dooku', side: 'dark' },
+  { name: 'Obiwan Kenobi', side: 'light' },
+  { name: 'Mace Windu', side: 'light' },
+  { name: 'Darth Sidious', side: 'dark' },
+  { name: 'Darth Maul', side: 'dark' }
+]));
 
 module.exports = getJedisNames;
