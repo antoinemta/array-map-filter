@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/arlensiuerendira/array-map-filter.svg?branch=master)](https://travis-ci.org/arlensiuerendira/array-map-filter)
+[![Build Status](https://travis-ci.org/antoinemta/array-map-filter.svg?branch=master)](https://travis-ci.org/antoinemta/array-map-filter)
 
 # Exercices sur map et filter
 
